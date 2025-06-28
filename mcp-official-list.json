@@ -1,0 +1,34 @@
+{
+  "version": "3.0.0",
+  "servers": [
+    {
+      "id": "filesystem",
+      "name": "Filesystem Access",
+      "isRecommended": true,
+      "package_name": "@modelcontextprotocol/server-filesystem",
+      "requires": ["node", "npm"],
+      "run_method": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-filesystem", "~"]
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub Integration",
+      "isRecommended": true,
+      "package_name": "@modelcontextprotocol/server-github",
+      "requires": ["node", "npm"],
+      "run_method": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-github"] },
+      "requires_env": ["GITHUB_PERSONAL_ACCESS_TOKEN"]
+    },
+    {
+      "id": "fetch",
+      "name": "Web Fetch",
+      "isRecommended": true,
+      "package_name": "mcp-server-fetch",
+      "requires": ["python"],
+      "install_method": { "type": "pip" },
+      "run_method": { "command": "uvx", "args": ["mcp-server-fetch"] }
+    }
+  ]
+}

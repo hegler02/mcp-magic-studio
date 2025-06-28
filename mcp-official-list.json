@@ -1,11 +1,12 @@
 {
-  "version": "3.0.0",
+  "version": "3.1.0",
   "servers": [
     {
       "id": "filesystem",
       "name": "Filesystem Access",
       "isRecommended": true,
       "package_name": "@modelcontextprotocol/server-filesystem",
+      "repository_url": "https://github.com/anthropic-ai/model-context-dev",
       "requires": ["node", "npm"],
       "run_method": {
         "command": "npx",
@@ -17,6 +18,7 @@
       "name": "GitHub Integration",
       "isRecommended": true,
       "package_name": "@modelcontextprotocol/server-github",
+      "repository_url": "https://github.com/anthropic-ai/model-context-dev",
       "requires": ["node", "npm"],
       "run_method": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-github"] },
       "requires_env": ["GITHUB_PERSONAL_ACCESS_TOKEN"]
@@ -26,6 +28,7 @@
       "name": "Web Fetch",
       "isRecommended": true,
       "package_name": "mcp-server-fetch",
+      "repository_url": "https://github.com/propJockey/mcp-server-fetch",
       "requires": ["python"],
       "install_method": { "type": "pip" },
       "run_method": { "command": "uvx", "args": ["mcp-server-fetch"] }
